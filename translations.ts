@@ -1,4 +1,5 @@
 
+
 export const translations: Record<string, Record<string, string>> = {
   en: {
     lang_code: 'en-US',
@@ -17,8 +18,15 @@ export const translations: Record<string, Record<string, string>> = {
     goal_Performance: "Performance",
 
     // Auth
-    auth_subtitle: "Sign in via magic link with your email below.",
+    auth_subtitle: "Sign in or create an account to continue.",
     email_placeholder: "your@email.com",
+    password_placeholder: "Password",
+    auth_sign_in: "Sign In",
+    auth_sign_up: "Sign Up",
+    auth_sign_in_google: "Sign in with Google",
+    auth_go_to_signup: "Don't have an account? Sign Up",
+    auth_go_to_signin: "Already have an account? Sign In",
+    auth_confirm_signup: "Check your email to confirm your account.",
     auth_sending: "Sending...",
     auth_send_link: "Send Magic Link",
     auth_magic_link_sent: "Check your email for the login link!",
@@ -241,8 +249,15 @@ export const translations: Record<string, Record<string, string>> = {
     goal_Performance: "Wydajność",
 
     // Auth
-    auth_subtitle: "Zaloguj się za pomocą magicznego linku wysłanego na Twój e-mail.",
+    auth_subtitle: "Zaloguj się lub utwórz konto, aby kontynuować.",
     email_placeholder: "twoj@email.com",
+    password_placeholder: "Hasło",
+    auth_sign_in: "Zaloguj się",
+    auth_sign_up: "Zarejestruj się",
+    auth_sign_in_google: "Zaloguj się z Google",
+    auth_go_to_signup: "Nie masz konta? Zarejestruj się",
+    auth_go_to_signin: "Masz już konto? Zaloguj się",
+    auth_confirm_signup: "Sprawdź swoją skrzynkę e-mail, aby potwierdzić konto.",
     auth_sending: "Wysyłanie...",
     auth_send_link: "Wyślij Magiczny Link",
     auth_magic_link_sent: "Sprawdź swoją skrzynkę e-mail, aby znaleźć link do logowania!",
@@ -465,8 +480,15 @@ export const translations: Record<string, Record<string, string>> = {
     goal_Performance: "Leistung",
 
     // Auth
-    auth_subtitle: "Melden Sie sich per Magic Link mit Ihrer E-Mail unten an.",
+    auth_subtitle: "Melden Sie sich an oder erstellen Sie ein Konto, um fortzufahren.",
     email_placeholder: "deine@email.de",
+    password_placeholder: "Passwort",
+    auth_sign_in: "Anmelden",
+    auth_sign_up: "Registrieren",
+    auth_sign_in_google: "Mit Google anmelden",
+    auth_go_to_signup: "Kein Konto? Registrieren",
+    auth_go_to_signin: "Bereits ein Konto? Anmelden",
+    auth_confirm_signup: "Überprüfen Sie Ihre E-Mails, um Ihr Konto zu bestätigen.",
     auth_sending: "Wird gesendet...",
     auth_send_link: "Magic Link senden",
     auth_magic_link_sent: "Überprüfen Sie Ihre E-Mails auf den Anmelde-Link!",
@@ -663,8 +685,15 @@ export const translations: Record<string, Record<string, string>> = {
     goal_Performance: "Præstation",
 
     // Auth
-    auth_subtitle: "Log ind via magisk link med din e-mail nedenfor.",
+    auth_subtitle: "Log ind eller opret en konto for at fortsætte.",
     email_placeholder: "din@email.dk",
+    password_placeholder: "Adgangskode",
+    auth_sign_in: "Log ind",
+    auth_sign_up: "Opret konto",
+    auth_sign_in_google: "Log ind med Google",
+    auth_go_to_signup: "Har du ikke en konto? Opret konto",
+    auth_go_to_signin: "Har du allerede en konto? Log ind",
+    auth_confirm_signup: "Tjek din e-mail for at bekræfte din konto.",
     auth_sending: "Sender...",
     auth_send_link: "Send Magisk Link",
     auth_magic_link_sent: "Tjek din e-mail for login-linket!",
@@ -832,8 +861,15 @@ export const translations: Record<string, Record<string, string>> = {
     goal_Performance: "Prestation",
     
     // Auth
-    auth_subtitle: "Logga in via magisk länk med din e-post nedan.",
+    auth_subtitle: "Logga in eller skapa ett konto för att fortsätta.",
     email_placeholder: "din@epost.se",
+    password_placeholder: "Lösenord",
+    auth_sign_in: "Logga in",
+    auth_sign_up: "Registrera dig",
+    auth_sign_in_google: "Logga in med Google",
+    auth_go_to_signup: "Har du inget konto? Registrera dig",
+    auth_go_to_signin: "Har du redan ett konto? Logga in",
+    auth_confirm_signup: "Kontrollera din e-post för att bekräfta ditt konto.",
     auth_sending: "Skickar...",
     auth_send_link: "Skicka Magisk Länk",
     auth_magic_link_sent: "Kontrollera din e-post för inloggningslänken!",
@@ -1001,8 +1037,15 @@ export const translations: Record<string, Record<string, string>> = {
     goal_Performance: "Ytelse",
     
     // Auth
-    auth_subtitle: "Logg inn via magisk lenke med e-posten din nedenfor.",
+    auth_subtitle: "Logg inn eller opprett en konto for å fortsette.",
     email_placeholder: "din@epost.no",
+    password_placeholder: "Passord",
+    auth_sign_in: "Logg inn",
+    auth_sign_up: "Registrer deg",
+    auth_sign_in_google: "Logg inn med Google",
+    auth_go_to_signup: "Har du ikke konto? Registrer deg",
+    auth_go_to_signin: "Har du allerede en konto? Logg inn",
+    auth_confirm_signup: "Sjekk e-posten din for å bekrefte kontoen din.",
     auth_sending: "Sender...",
     auth_send_link: "Send Magisk Lenke",
     auth_magic_link_sent: "Sjekk e-posten din for innloggingslenken!",
@@ -1170,8 +1213,15 @@ export const translations: Record<string, Record<string, string>> = {
     goal_Performance: "Suorituskyky",
     
     // Auth
-    auth_subtitle: "Kirjaudu sisään sähköpostiin lähetettävällä taikalinkillä.",
+    auth_subtitle: "Kirjaudu sisään tai luo tili jatkaaksesi.",
     email_placeholder: "sinun@sähköposti.fi",
+    password_placeholder: "Salasana",
+    auth_sign_in: "Kirjaudu sisään",
+    auth_sign_up: "Luo tili",
+    auth_sign_in_google: "Kirjaudu Googlella",
+    auth_go_to_signup: "Eikö sinulla ole tiliä? Luo tili",
+    auth_go_to_signin: "Onko sinulla jo tili? Kirjaudu sisään",
+    auth_confirm_signup: "Tarkista sähköpostisi vahvistaaksesi tilisi.",
     auth_sending: "Lähetetään...",
     auth_send_link: "Lähetä Taikalinkki",
     auth_magic_link_sent: "Tarkista sähköpostisi kirjautumislinkin varalta!",
