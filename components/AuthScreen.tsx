@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { supabase } from '../lib/supabaseClient';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -21,9 +20,11 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onDevLogin }) => {
         setMessage('');
         setLoading(true);
         // FIX: Changed to `signIn` for magic link auth to match older Supabase v1 API, to resolve type errors.
-        const { error } = await supabase.auth.signIn({
-            email,
-        });
+        // FIX: Added redirectTo option to ensure magic link works on deployed environments like Netlify.
+        const { error } = await supabase.auth.signIn(
+            { email },
+            { redirectTo: window.location.origin }
+        );
 
         if (error) {
             setMessage(error.message);
