@@ -1,8 +1,8 @@
 
+
+
 import React, { useState, useEffect } from 'react';
-// FIX: Reverted to `import type`. A value import for a type-only export can break type inference for the entire module, causing subsequent errors. Using `import type` is the correct approach for importing types.
-// FIX: The Session type might not be properly re-exported in some versions of `@supabase/supabase-js`. Importing directly from `@supabase/auth-js` is more robust.
-import type { Session } from '@supabase/auth-js';
+import type { Session } from '@supabase/supabase-js';
 import type { Goal, UserPreferences, TimerStyle } from '../types';
 import { Goal as GoalEnum, VOICES } from '../types';
 import { useLanguage } from '../contexts/LanguageContext';
