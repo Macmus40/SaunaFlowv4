@@ -19,12 +19,14 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onDevLogin }) => {
         e.preventDefault();
         setMessage('');
         setLoading(true);
-        // FIX: Changed to `signIn` for magic link auth to match older Supabase v1 API, to resolve type errors.
-        // FIX: Added redirectTo option to ensure magic link works on deployed environments like Netlify.
-        const { error } = await supabase.auth.signIn(
-            { email },
-            { redirectTo: window.location.origin }
-        );
+        // FIX: Updated deprecated `signIn` to the current `signInWithOtp` method for magic link authentication.
+        // This resolves potential issues with newer library versions and ensures compatibility.
+        const { error } = await supabase.auth.signInWithOtp({
+            email,
+            options: {
+                emailRedirectTo: window.location.origin,
+            },
+        });
 
         if (error) {
             setMessage(error.message);

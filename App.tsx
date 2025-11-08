@@ -1,4 +1,5 @@
 
+
 import React, { useState, useEffect, useCallback } from 'react';
 // FIX: Reverted to `import type`. A value import for a a type-only export can break type inference for the entire module, causing subsequent errors. Using `import type` is the correct approach for importing types.
 // FIX: The Session type might not be properly re-exported in some versions of `@supabase/supabase-js`. Importing directly from `@supabase/auth-js` is more robust and should resolve the cascade of type errors related to the Supabase auth client.
@@ -123,7 +124,8 @@ const App: React.FC = () => {
     });
 
     return () => {
-      authListener?.unsubscribe();
+      // FIX: The `unsubscribe` method is on the `subscription` object in Supabase v2.
+      authListener.data.subscription.unsubscribe();
     };
   }, []);
   
@@ -349,8 +351,8 @@ const App: React.FC = () => {
   };
 
   const handleResetApp = async () => {
-    // FIX: Changed to `logout()` which was used in older Supabase versions, to resolve type errors.
-    await supabase.auth.logout();
+    // FIX: Updated deprecated `logout()` to the current `signOut()` method.
+    await supabase.auth.signOut();
     // Clear local state to prevent flash of old content
     setSession(null);
     setGoal(null);
